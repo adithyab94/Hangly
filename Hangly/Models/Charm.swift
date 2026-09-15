@@ -29,6 +29,7 @@ enum CharmKind: String, CaseIterable, Codable, Sendable, Identifiable {
     case horseshoe
     case scarab
     case himmeli
+    case ocubliNazar = "ocubli-nazar"
 
     var id: String { rawValue }
 
@@ -51,6 +52,7 @@ enum CharmKind: String, CaseIterable, Codable, Sendable, Identifiable {
         case .horseshoe: "Horseshoe"
         case .scarab: "Scarab"
         case .himmeli: "Himmeli"
+        case .ocubliNazar: "Ocubli Nazar"
         }
     }
 
@@ -73,6 +75,7 @@ enum CharmKind: String, CaseIterable, Codable, Sendable, Identifiable {
         case .horseshoe: "u.circle.fill"
         case .scarab: "ant.fill"
         case .himmeli: "pyramid.fill"
+        case .ocubliNazar: "eye.fill"
         }
     }
 }

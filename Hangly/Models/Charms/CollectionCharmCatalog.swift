@@ -89,7 +89,7 @@ struct SVGCharm: BuiltInCharm {
     }
 }
 
-/// The eleven collection charms as data.
+/// The twelve collection charms as data.
 enum CollectionCharmCatalog {
     struct Entry: Sendable {
         let kind: CharmKind
@@ -307,6 +307,20 @@ enum CollectionCharmCatalog {
             sound: .soft,
             beadCount: 0,
             bodyRun: 2
+        ),
+        Entry(
+            kind: .ocubliNazar,
+            sourceFileName: "ocubli-nazar.svg",
+            mass: 2.75,
+            radiusRatio: 0.145,
+            palette: CharmPalette(
+                primary: CharmColor(0.15, 0.26, 0.56),
+                secondary: CharmColor(0.09, 0.16, 0.38),
+                deep: CharmColor(0.04, 0.08, 0.20),
+                light: CharmColor(0.44, 0.70, 0.93)
+            ),
+            sound: .glass,
+            beadCount: 1
         )
     ]
 

@@ -25,7 +25,7 @@ struct CharmTests {
     func shipsTheClassics() {
         let classics: Set<CharmKind> = [.circle, .camera, .star, .heart, .diamond]
         #expect(classics.isSubset(of: Set(CharmKind.allCases)))
-        #expect(CharmKind.allCases.count == 16)
+        #expect(CharmKind.allCases.count == 17)
     }
 
     @Test("Every charm has sane physical properties")

@@ -107,6 +107,15 @@
       "previewImage": "charm-preview-himmeli"
     },
     {
+      "id": "ocubli-nazar",
+      "name": "Ocubli Nazar",
+      "region": "Turkey and the Mediterranean",
+      "category": "protection",
+      "description": "A hand-drawn take on the evil-eye bead: a gold-rimmed eye with a sunburst of gold rays, drawn to remind the wearer not to hold onto the evil eye's glance.",
+      "tags": ["evil eye", "eye", "blue", "amulet", "protection"],
+      "previewImage": "charm-preview-ocubli-nazar"
+    },
+    {
       "id": "circle",
       "name": "Bead",
       "region": "Universal",

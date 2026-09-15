@@ -52,11 +52,11 @@ struct CharmLibraryDocumentTests {
         }
     }
 
-    @Test("The eleven collection charms are all present")
+    @Test("The twelve collection charms are all present")
     func collectionIsComplete() {
         let collection: Set<CharmKind> = [
             .nazar, .hamsa, .nimbuMirchi, .ghanta, .drishtiBommai, .panchangJie,
-            .daruma, .manekiNeko, .horseshoe, .scarab, .himmeli
+            .daruma, .manekiNeko, .horseshoe, .scarab, .himmeli, .ocubliNazar
         ]
         for kind in collection {
             #expect(BuiltInCharms.charm(for: kind).id == .builtIn(kind))
