@@ -80,8 +80,15 @@ struct CharmArtworkSplitterTests {
             let content = try #require(vector.unitContentRect)
 
             #expect(regions.body.maxY > content.maxY - 0.02, "\(entry.kind) body is cut short")
-            // Taller than wide, so the cord meets it at the top of its square.
-            #expect(regions.knotInset == 1)
+            if entry.kind == .ocubliNazar {
+                // The eye is drawn wider than it is tall, unlike every other charm
+                // in the collection, so its knot sits short of the square's edge
+                // rather than flush with it.
+                #expect(regions.knotInset < 1, "\(entry.kind) knot inset")
+            } else {
+                // Taller than wide, so the cord meets it at the top of its square.
+                #expect(regions.knotInset == 1, "\(entry.kind) knot inset")
+            }
         }
     }
 

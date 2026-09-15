@@ -311,8 +311,8 @@ enum CollectionCharmCatalog {
         Entry(
             kind: .ocubliNazar,
             sourceFileName: "ocubli-nazar.svg",
-            mass: 2.75,
-            radiusRatio: 0.145,
+            mass: 2.95,
+            radiusRatio: 0.148,
             palette: CharmPalette(
                 primary: CharmColor(0.15, 0.26, 0.56),
                 secondary: CharmColor(0.09, 0.16, 0.38),
