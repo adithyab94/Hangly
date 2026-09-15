@@ -1,0 +1,39 @@
+name: Release DMG
+
+on:
+  push:
+    tags: ['v*.*.*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  dmg:
+    name: Build and package the DMG
+    # Apple Silicon runner: the project is arm64-only.
+    runs-on: macos-15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select the newest installed Xcode
+        run: |
+          newest="$(ls -d /Applications/Xcode*.app | sort -V | tail -1)"
+          echo "Using $newest"
+          sudo xcode-select -switch "$newest"
+
+      - name: Build the DMG
+        run: ./Scripts/build-dmg.sh
+
+      - name: Upload as a workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Hangly-dmg
+          path: dist/Hangly.dmg
+
+      - name: Attach to the matching GitHub release
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "${GITHUB_REF_NAME}" dist/Hangly.dmg --clobber
