@@ -123,7 +123,8 @@ struct SVGAssetTests {
             Expected(kind: .manekiNeko, mass: 3.45, radius: 0.167, sound: .wood),
             Expected(kind: .horseshoe, mass: 3.85, radius: 0.151, sound: .metal),
             Expected(kind: .scarab, mass: 3.15, radius: 0.146, sound: .glass),
-            Expected(kind: .himmeli, mass: 2.35, radius: 0.169, sound: .soft)
+            Expected(kind: .himmeli, mass: 2.35, radius: 0.169, sound: .soft),
+            Expected(kind: .ocubliNazar, mass: 2.75, radius: 0.145, sound: .glass)
         ]
         #expect(expected.count == CollectionCharmCatalog.entries.count)
         for item in expected {
